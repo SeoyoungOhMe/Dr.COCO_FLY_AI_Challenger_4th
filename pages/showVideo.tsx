@@ -264,6 +264,14 @@ export default function ShowVideo() {
   }, []);
   ///// 랜드마크 표시를 위한 부분 끝 /////
 
+  const baseStyle = {
+    borderRadius: '20px', // 모서리를 둥글게
+    backgroundColor: '#e0e0e0', // 배경색을 light gray로
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 그림자 효과 추가
+    padding: '20px', // 안쪽 여백 추가
+    margin: '20px 0 40px 0',
+  };
+
   return (
 
     <div style={{ display: "flex", flexDirection: "column" , alignItems : "center" }}>
@@ -272,8 +280,8 @@ export default function ShowVideo() {
       {/* <span style={{ margin: "20px auto", fontSize: "30px" }}>
         동영상 상영 페이지입니다.{filePath}
       </span> */}
-      <div style={{position: "relative" , width: "400px"}}>
-            <span> 움직임 점수 : {movementScore} </span>
+      <div style={{...baseStyle, position: "relative" , width: "400px"}}>
+            <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}> 움직임 점수 : {movementScore} </span>
             {/* <Slider min={0} max={1} value={movementScore} step={0.001} disabled={false} /> */}
             <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
               <Image src="/moveLittle.png" alt="" width={0} height={0} style={{ height: "20px", width: "14px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
@@ -283,7 +291,7 @@ export default function ShowVideo() {
               <Image src="/moveMany.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginLeft: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
             </div>
 
-            <span> 눈감음 점수 : {blinkScore} </span>
+            <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}> 눈감음 점수 : {blinkScore} </span>
             <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center",  justifyContent: "space-between" }}>
               <Image src="/eyeOpen.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
               <div style={{ width : "360px" }}>
@@ -291,7 +299,7 @@ export default function ShowVideo() {
               </div>
               <Image src="/eyeClose.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginLeft: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
             </div>
-            <span>랜드마크 표시하기 :</span>  <Switch defaultValue={displayLandmark} onChange={ ()=>{ setDisplayLandmark(!displayLandmark) } }/>
+            <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}>랜드마크 표시하기 :</span>  <Switch defaultValue={displayLandmark} onChange={ ()=>{ setDisplayLandmark(!displayLandmark) } }/>
       </div>
 
       <div style={{position: "relative", width: "400px", display: "flex", flexDirection: "column" , alignItems : "center" }} id="videoContainer">
