@@ -264,6 +264,14 @@ export default function ShowVideo() {
   }, []);
   ///// 랜드마크 표시를 위한 부분 끝 /////
 
+  const baseStyle = {
+    borderRadius: '8px', // 모서리를 둥글게
+    backgroundColor: '#e0e0e0', // 배경색을 light gray로
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 그림자 효과 추가
+    padding: '20px', // 안쪽 여백 추가
+    margin: '20px 0 40px 0',
+  };
+
   return (
 
     <div style={{ display: "flex", flexDirection: "column" , alignItems : "center" }}>
@@ -272,7 +280,7 @@ export default function ShowVideo() {
       {/* <span style={{ margin: "20px auto", fontSize: "30px" }}>
         동영상 상영 페이지입니다.{filePath}
       </span> */}
-      <div style={{position: "relative" , width: "400px"}}>
+      <div style={{...baseStyle, position: "relative" , width: "400px"}}>
             <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}> 움직임 점수 : {movementScore} </span>
             {/* <Slider min={0} max={1} value={movementScore} step={0.001} disabled={false} /> */}
             <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
