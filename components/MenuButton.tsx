@@ -28,8 +28,8 @@ const MenuButton: React.FC = () => {
   }, [isOpen]);
 
   const buttonStyle: React.CSSProperties = {
-    background: '##607D8B',
-    border: '1px solid #ccc',
+    background: 'white',
+    border: '0px solid #ccc',
     cursor: 'pointer',
     padding: '10px',
     display: 'flex',
@@ -72,11 +72,14 @@ const MenuButton: React.FC = () => {
       {isOpen && (
         <div style={menuContentStyle}>
 
-        {/* href에 들어갈 링크는 챗봇 팀에게 받아서 수정해야 함. 일단 임시로 네이버 링크로 해둠. */}
-          <a href="https://www.naver.com" rel="noopener noreferrer" style={{color: '#000', textDecoration: 'none'}}>
+          {/* href에 들어갈 링크는 챗봇 팀에게 받아서 수정해야 함. 일단 임시로 네이버 링크로 해둠. */}
+          <a href="https://www.google.com" rel="noopener noreferrer" style={{color: '#000', textDecoration: 'none', fontFamily: 'IBMPlexSansKR-Regular'}}>
+            챗봇
+          </a>
+          <br/>
+          <a href="https://www.naver.com" rel="noopener noreferrer" style={{color: '#000', textDecoration: 'none', fontFamily: 'IBMPlexSansKR-Regular'}}>
             수면 레포트
           </a>
-
         </div>
       )}
     </div>
