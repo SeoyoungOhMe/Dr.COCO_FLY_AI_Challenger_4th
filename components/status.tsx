@@ -56,15 +56,15 @@ export default function BoxRow(  props:any ) {
       <div style={boxStyle}>
         <div style={contentStyle}>
           <img src="/coco_transparent.png" alt="코코박사" style={{ width: '20px', height: '20px', marginRight: '5px' }} />
-          <span>코코박사</span>
+          <span style={{fontFamily: 'TTHakgyoansimUndongjangL' }}>코코박사</span>
         </div>
       </div>
       <div style={{...boxStyle, justifyContent: 'flex-start'}}> {/* 두 번째 박스 스타일 수정 */}
-        <span style={{ marginRight: '0px'  }}>뒤집음</span>
+        <span style={{ marginRight: '0px', fontFamily: 'IBMPlexSansKR-Regular' }}>뒤집음</span>
         <button style={{...buttonStyle, backgroundColor: (props.flipped==="no")? 'mediumseagreen' : 'red' ,}}>{props.flipped}</button>
       </div>
       <div style={{...boxStyle, justifyContent: 'flex-start'}}> {/* 두 번째 박스 스타일 수정 */}
-        <span style={{ marginRight: '0px' }}>수면&nbsp;</span>
+        <span style={{ marginRight: '0px', fontFamily: 'IBMPlexSansKR-Regular' }}>수면&nbsp;</span>
         <button style={{...buttonStyle, backgroundColor: (props.isSleeping==="no") ? "orange" : 'cornflowerblue' }}>{props.isSleeping}</button>
       </div>
     </div>
