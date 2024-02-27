@@ -8,6 +8,8 @@ import { FaceLandmarker, FilesetResolver, DrawingUtils , FaceDetectorResult, Pos
 // import { drawCanvas } from "./utils/drawCanvas";
 import axios from 'axios';
 import { Slider, Switch } from 'antd';
+import Image from "next/image";
+
 
 
 export default function MediaPipe() {
@@ -451,10 +453,6 @@ export default function MediaPipe() {
       
       <Header />
       
-      <text style={{ margin: "20px auto", fontSize: "30px" }}>
-        media pipe 실험 입니다
-      </text>
-
       <div ref={blinkSectionRef} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
         <div className="cam-container" style={{position: "relative", height: "360px", width: "480px"}}>
@@ -462,12 +460,31 @@ export default function MediaPipe() {
           <canvas ref={blinkCanvasRef} style={{position: "absolute", top: 0, left: 0, width: "480px", height: "360px"}}></canvas>
         </div>
 
-        <div className="blend-shapes">
+        <div className="blend-shapes" style={{ display: "flex", flexDirection: "column", width: "400px" , alignItems : "center" }}>
           <ul className="blend-shapes-list" id="video-blend-shapes" ref={ulRef} style={{display:"none"}}></ul>
-          <span>눈감음 점수 : {blink_score} </span>
-          <Slider min={0} max={1} value={   blink_score  } step={0.001} disabled={false} />
-          <span>움직임 점수 : {movement_score} </span>
-          <Slider min={0} max={1} value={  movement_score  } step={0.001} disabled={false} />
+          
+          {/* <span>움직임 점수 : {movement_score} </span> */}
+
+          <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
+              <Image src="/moveLittle.png" alt="" width={0} height={0} style={{ height: "20px", width: "14px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
+              <div style={{ width : "360px" }}>
+              <Slider min={0} max={1} value={movement_score} step={0.001} disabled={false} />
+              </div>
+              <Image src="/moveMany.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginLeft: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
+          </div>
+
+          {/* <span>눈감음 점수 : {blink_score} </span> */}
+
+          <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
+            <Image src="/eyeOpen.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
+            <div style={{ width : "360px" }}>
+              <Slider min={0} max={1} value={   blink_score  } step={0.001} disabled={false} />
+            </div>
+            <Image src="/eyeClose.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginLeft: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
+          </div>
+
+          
+          
           <span>{isSleeping ? "당신은 자고 있어요." : "당신은 깨어 있네요." }</span>
           <br></br>
           <span>{isFlipped ? "당신은 뒤집었어요." : "당신은 뒤집지 않았어요." }</span>
