@@ -265,7 +265,7 @@ export default function ShowVideo() {
   ///// 랜드마크 표시를 위한 부분 끝 /////
 
   const baseStyle = {
-    borderRadius: '8px', // 모서리를 둥글게
+    borderRadius: '20px', // 모서리를 둥글게
     backgroundColor: '#e0e0e0', // 배경색을 light gray로
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 그림자 효과 추가
     padding: '20px', // 안쪽 여백 추가
