@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/171ccb49-bed4-4559-a5fb-60df4f2a10c6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/fly-ai-front-test",
+    "appService.deploySubpath": "."
+}

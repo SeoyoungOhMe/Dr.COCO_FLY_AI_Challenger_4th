@@ -1,0 +1,32 @@
+/* styles/video-overlay.css */
+
+.videoContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* 비디오의 최대 너비를 조정할 수 있습니다. */
+  }
+  
+.overlayImage {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
+    opacity: 0.5; /* 원하는 투명도로 조절합니다. */
+}
+
+.overlayImage2 {
+  position: absolute;
+  top: 600px;
+  left: 800px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
+  opacity: 0.5; /* 원하는 투명도로 조절합니다. */
+}
+
+.rotated {
+  transform: rotate(720deg); /* Adjust the rotation angle as needed */
+  transition: transform 0.5s ease; /* Adjust the duration and easing as needed */
+}

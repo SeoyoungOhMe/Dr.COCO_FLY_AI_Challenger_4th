@@ -1,0 +1,13 @@
+/* .invisible {
+  opacity: 0.2;
+  font-size: large;
+  background-color: aqua;
+  font-family: cursive;
+} */
+
+.canvas{
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    background-color: transparent;
+}
