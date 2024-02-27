@@ -10,17 +10,30 @@ import Link from "next/link"
 // };
 
 const Header = () => {
+
+  const headerStyle = {
+    backgroundColor: '#EFECCD', // 박스 색상 설정
+    //margin: "auto",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "100%",
+    padding: "25px 0", // 상단과 하단에 패딩 추가
+    // alignItems: "center", // 필요한 경우 주석 해제
+  };
+
   return (
     
-    <div
-      style={{
-        margin: "10px auto",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        // alignItems : "center"
-      }}
-    >
+    // <div
+    //   style={{
+    //     margin: "10px auto",
+    //     display: "flex",
+    //     flexDirection: "row",
+    //     justifyContent: "center",
+    //     // alignItems : "center"
+    //   }}
+    // >
+    <div style={headerStyle}>
       <Link href = "/">
         <div
           style={{
