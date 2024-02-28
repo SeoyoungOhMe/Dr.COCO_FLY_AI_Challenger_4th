@@ -26,10 +26,22 @@ export default function ChatButtonWithBubble(props: any) {
   }
 `;
 
-const FadeOutDiv = styled.div`
-  animation: ${fadeOut} 4s forwards;
-`;
+  const FadeOutDiv = styled.div`
+    animation: ${fadeOut} 4s forwards;
+  `;
+
+
+  const [parentId,setParentId] = useState("부모님");
+  const [childName , setChildName] = useState("동동이");
+
+  useEffect(() => {
+    setChildName( localStorage.getItem("childName")! );
+    setParentId( localStorage.getItem("parentId")! );
+    console.log( childName );
+    console.log( parentId );
+  }, [])
   
+
   // 메세지를 결정하는 로직
   useEffect(() => {
 
@@ -40,65 +52,76 @@ const FadeOutDiv = styled.div`
     if (timeSinceLastUpdate > 4000) {
 
       if (movementScore > 0.8) {
-
         if( !sentMovementAlarm ){
+          setMessage(`${childName}가 많이 움직이고 있어요! 가서 확인해보는 게 어떨까요?`);
 
-          sendPush( "동동이아버님" , "동동이가 많이 움직이고 있어요!가서 확인해보는 게 어떨까요?" ).then(() => {
-            setMessage("동동이가 많이 움직이고 있어요! 가서 확인해보는 게 어떨까요?");
+          if( parentId ){
+          sendPush( parentId , `${childName}가 많이 움직이고 있어요!가서 확인해보는 게 어떨까요?` ).then(() => {
+            
             setLastUpdate(now); // 마지막 업데이트 시간을 현재 시간으로 설정
             console.log("푸시 전송 성공");
           }).catch((error) => {
             console.log(error);
-          });
+          });}
 
           setSentMovementAlarm(true);
-        }
-
-      } else {
-        setMessage(""); // 조건에 따라 메시지를 비웁니다.
+          }
       }
+      // else{ setMessage("") };
+
 
       if( flipped === "yes" ) {
 
-        if( !sentFlipAlarm ){
+          if( !sentFlipAlarm ){
+  
+            setMessage(`${childName}가 몸을 뒤집었어요. 이 상태가 계속되면 위험할 수 있어요.`);
 
-          sendPush( "동동이아버님" , "동동이가 몸을 뒤집었어요. 이 상태가 계속되면 위험할 수 있어요." ).then(() => {
-            setMessage("동동이가 몸을 뒤집었어요. 이 상태가 계속되면 위험할 수 있어요.");
-            setLastUpdate(now); // 마지막 업데이트 시간을 현재 시간으로 설정
-            console.log("푸시 전송 성공");
-          }).catch((error) => {
-            console.log(error);
-          });
-
-          setSentFlipAlarm(true);
-
-        }
-
-      } else {
-        setMessage(""); // 조건에 따라 메시지를 비웁니다.
-      }
-
+            if( parentId ){
+            sendPush( parentId , `${childName}가 몸을 뒤집었어요. 이 상태가 계속되면 위험할 수 있어요.` ).then(() => {
+              
+              setLastUpdate(now); // 마지막 업데이트 시간을 현재 시간으로 설정
+              console.log("푸시 전송 성공");
+            }).catch((error) => {
+              console.log(error);
+            });
+            }
+  
+            setSentFlipAlarm(true);
+  
+          }
+  
+      } 
+      // else { setMessage(""); }
+      
+      
       if( isSleeping === "no" ) {
-        // setMessage("동동이가 깬 것 같아요. 가서 확인해보는 게 어떨까요?");
+        // setMessage("${childName}가 깬 것 같아요. 가서 확인해보는 게 어떨까요?");
         // setLastUpdate(now); // 마지막 업데이트 시간을 현재 시간으로 설정
 
         if( !sentSleepingAlarm ){
 
-          sendPush( "동동이아버님" , "동동이가 깬 것 같아요. 가서 확인해보는 게 어떨까요?" ).then(() => {
-            setMessage("동동이가 깬 것 같아요. 가서 확인해보는 게 어떨까요?");
+          setMessage(`${childName}가 깬 것 같아요. 가서 확인해보는 게 어떨까요?`);
+
+          if( parentId ){
+          sendPush( parentId , `${childName}가 깬 것 같아요. 가서 확인해보는 게 어떨까요?` ).then(() => {
+            
             setLastUpdate(now); // 마지막 업데이트 시간을 현재 시간으로 설정
             console.log("푸시 전송 성공");
           }).catch((error) => {
             console.log(error);
           });
+          }
 
           setSentSleepingAlarm(true);
 
         }
 
-      } else {
-        setMessage(""); // 조건에 따라 메시지를 비웁니다.
       }
+      // else{ setMessage(""); } 
+
+      // else {
+      //   setMessage(""); // 조건에 따라 메시지를 비웁니다.
+      // }
 
     }
 

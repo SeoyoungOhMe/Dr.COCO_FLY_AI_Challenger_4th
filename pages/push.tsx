@@ -9,12 +9,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore"; 
 import { useState , ChangeEvent } from "react";
-
-
-
-
-
-
 export default function Push() {
 
     const firebaseConfig = {
@@ -49,7 +43,15 @@ export default function Push() {
         });
 
         // 2. vap id 를 통해 토큰 발급 받기 
-        const messaging = getMessaging();
+
+        let messaging;
+        if (typeof window !== "undefined" && typeof window.navigator !== "undefined") {
+          messaging = getMessaging(app);
+        }
+        else{
+          messaging = getMessaging(app);
+        }
+        
         console.log( messaging );
         console.log( process.env.NEXT_PUBLIC_VAPID_KEY! );
 
@@ -99,7 +101,7 @@ export default function Push() {
     // }) => {
     const sendPush = async (userId:string , bubbleMessage:string ) => {
 
-        const title = userId + "을 위한 알림";
+        const title = userId + "님을 위한 알림";
         const body = bubbleMessage;
 
         const message = { data: {title,body,userId} };

@@ -35,7 +35,7 @@ export default function MediaPipe() {
   let faceLandmarker:FaceLandmarker;
   let canvasElement : HTMLCanvasElement;
   let canvasCtx : CanvasRenderingContext2D;
-  const videoWidth = 480;
+  const videoWidth = 1000;
   let lastVideoTime = -1;
   let results:any = undefined;
   let resultsPose:any = undefined;
@@ -341,7 +341,7 @@ export default function MediaPipe() {
     const data = {
       blink_score: blink_score,
       move_score: movement_score,
-      flip: 0,
+      flip: 0.0,
       silence: 1,
       baby_cry: 0,
       baby_laughter: 0
@@ -444,7 +444,13 @@ export default function MediaPipe() {
     }
   }
 
-
+  const baseStyle = {
+    borderRadius: '20px', // 모서리를 둥글게
+    backgroundColor: '#e0e0e0', // 배경색을 light gray로
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 그림자 효과 추가
+    padding: '20px', // 안쪽 여백 추가
+    margin: '20px 0 40px 0',
+  };
 
   // 뒤집기 코드 끝
 
@@ -455,16 +461,23 @@ export default function MediaPipe() {
       
       <div ref={blinkSectionRef} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
-        <div className="cam-container" style={{position: "relative", height: "360px", width: "480px"}}>
+        {/* <div className="cam-container" style={{position: "relative", height: "360px", width: "480px"}}>
           <video ref={webcamRef} style={{position: "absolute", top: 0, left: 0, width: "480px", height: "360px"}} autoPlay playsInline></video>
           <canvas ref={blinkCanvasRef} style={{position: "absolute", top: 0, left: 0, width: "480px", height: "360px"}}></canvas>
+        </div> */}
+
+        <div className="cam-container" style={{position: "relative", height: "780px", width: "900px"}}>
+          <video ref={webcamRef} style={{position: "absolute", top: 0, left: 0, width: "640px", height: "600px"}} autoPlay playsInline></video>
+          <canvas ref={blinkCanvasRef} style={{position: "absolute", top: 0, left: 0, width: "640px", height: "480px"}}></canvas>
         </div>
 
-        <div className="blend-shapes" style={{ display: "flex", flexDirection: "column", width: "400px" , alignItems : "center" }}>
+
+
+        <div className="blend-shapes" style={{ ...baseStyle, display: "flex", flexDirection: "column", width: "400px"  }}>
           <ul className="blend-shapes-list" id="video-blend-shapes" ref={ulRef} style={{display:"none"}}></ul>
           
           {/* <span>움직임 점수 : {movement_score} </span> */}
-
+          <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}> 움직임 점수 </span>
           <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
               <Image src="/moveLittle.png" alt="" width={0} height={0} style={{ height: "20px", width: "14px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
               <div style={{ width : "360px" }}>
@@ -474,7 +487,7 @@ export default function MediaPipe() {
           </div>
 
           {/* <span>눈감음 점수 : {blink_score} </span> */}
-
+          <span style={{fontFamily: 'IBMPlexSansKR-Regular' }}>눈감음 점수</span>
           <div style={{width: "100%" , display : "flex" , flexDirection : "row" as "row" , alignItems : "center" , justifyContent: "space-between" }}>
             <Image src="/eyeOpen.png" alt="" width={0} height={0} style={{ height: "20px", width: "20px", marginRight: "10px" }} loader={({ src, width }) => { return src + "?w=" + width; }} />
             <div style={{ width : "360px" }}>

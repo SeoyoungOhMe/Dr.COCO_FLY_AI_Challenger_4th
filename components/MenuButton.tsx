@@ -28,7 +28,7 @@ const MenuButton: React.FC = () => {
   }, [isOpen]);
 
   const buttonStyle: React.CSSProperties = {
-    background: 'white',
+    background: '#EFECCD',
     border: '0px solid #ccc',
     cursor: 'pointer',
     padding: '10px',
@@ -38,6 +38,7 @@ const MenuButton: React.FC = () => {
     alignItems: 'center',
     width: '50px',
     height: '50px',
+    visibility : "hidden"
   };
 
   const dotStyle: React.CSSProperties = {

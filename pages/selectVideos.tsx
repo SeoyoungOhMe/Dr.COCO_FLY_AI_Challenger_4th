@@ -11,10 +11,10 @@ export default function SelectVideos() {
 
   const thumbnails = [
 
-    '/thumbnails/wakeUp.png',
-    '/thumbnails/flip.png',
+    '/thumbnails/wakeUp_fixed.png',
+    '/thumbnails/flip_fixed.png',
     '/thumbnails/dark_wakeUp.png',
-    '/thumbnails/dark_flip.png'
+    '/thumbnails/dark_flip.png',
 
   ];
 
@@ -28,8 +28,8 @@ export default function SelectVideos() {
   return (
     <div style={{ display: "flex", flexDirection: "column" , alignItems : "center" }}>
       <Header />
-      <text style={{ margin: "20px auto", fontSize: "30px" }}>
-        동영상 선택 페이지 입니다
+      <text style={{ margin: "20px auto", fontSize: "30px", fontFamily: 'IBMPlexSansKR-Regular' }}>
+        실행해보고 싶은 영상을 선택하세요
       </text>
 
       <div  style={{ width : "400px" }}>

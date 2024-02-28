@@ -11,7 +11,7 @@ export default async function handler(
 
   try {
     // 외부 API에 데이터를 POST 요청
-    const response = await axios.post('http://3.35.120.59:8000/svm_process/svm_process/', data);
+    const response = await axios.post('http://3.35.120.59:8000/sleep_recog/sleep_recog_data_input/', data);
     // 외부 API의 응답을 클라이언트에 전달
     res.status(200).json(response.data);
   } catch (error) {
