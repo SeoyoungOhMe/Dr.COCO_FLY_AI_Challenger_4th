@@ -116,7 +116,7 @@ npm run dev
 | 육아전문챗 페이지  |  제품추천챗 페이지   |
 |  <img width="329" src="img/profchat.png"/> |  <img width="329" src="img/recchat.png"/>| 
 | 수면패턴 분석 페이지  |     |
-|  <img width="329" src="img/report.png"/> |  <img width="329" src=""/>| 
+|  <img width="329" src="img/report.png"/> |  
 
 ---
 ## 주요 기능 📦
