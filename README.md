@@ -9,23 +9,23 @@
 </div>
 
 # Dr.COCO
-> **SKT FLY AI 4기 열정 5조** <br/> 
-**개발기간: 2023.12.28 ~ 2024.2.28**
+> **SKT FLY AI Challenger 4기 열정 5조** <br/> 
+**개발기간 (Development Period): 2023.12.28 ~ 2024.2.28**
 
-## 배포 주소
+## 배포 주소 🔗
 
 [https://fly-ai-front-test.azurewebsites.net/](https://fly-ai-front-test.azurewebsites.net/) <br>
 <!-- > **프론트 서버** : [http://voluntain.cs.skku.edu:33307/](http://voluntain.cs.skku.edu:33307/)<br>
 > **백엔드 서버** : [http://voluntain.cs.skku.edu:2223/](http://voluntain.cs.skku.edu:2223/)<br> -->
 
-## 웹 개발팀 소개
+## 웹 개발팀 소개 👥
 
-- 오서영 : 프론트엔드
-- 임태규(팀장) : 백엔드
-- 김선아 : 백엔드
-- 김시원 : 프론트엔드
-- 우정아 : 백엔드
-- 주동근 : 기획
+- 오서영 : Front-end
+- 임태규(팀장) : Back-end, AI
+- 김선아 : Back-end
+- 김시원 : Front-end
+- 우정아 : Back-end
+- 주동근 : Planning
 
 
 <!-- |      박지예       |          서채연         |       이현정         |                                                                                                               
@@ -34,10 +34,14 @@
 |   [@parkjiye](https://github.com/parkjiye)   |    [@ChaeyeonSeo](https://github.com/ChaeyeonSeo)  | [@hyunjeong408](https://github.com/hyunjeong408)  |
 | 성균관대학교 소프트웨어학과 4학년 | 성균관대학교 소프트웨어학과 4학년 | 성균관대학교 소프트웨어학과 4학년 | -->
 
-## 프로젝트 소개
+## Project Introduction 📁
 
 - 와이파이 캠으로 입력된 영상에 대한 복합적 분석을 통해 수면 상황을 부모에게 알려, 아이의 수면 시간 동안 편안한 휴식이 가능하게 합니다.
+  
+  Through complex analysis of images input through Wi-Fi cameras, parents are informed of their sleeping conditions, enabling a comfortable rest during the child's sleep time.   
 - 기 학습된 의학 자료 및 우리 아기만의 육아 정보를 추가로 학습하여, 연령 및 상황별 적절한 육아 지식을 공부해야 할 수고로움을 줄여 줍니다.
+  
+  By additionally learning pre-trained medical materials and our baby's own parenting information, it reduces the trouble of studying appropriate parenting knowledge for each age and situation.
 
 <!-- #### Voluntain will share the knowledge of programming.
 You can take easy-to-understand lectures created by our team, including Scratch and Python. Also, improve your understanding and application skills of programming with exercise questions in the lecture videos.
@@ -49,7 +53,7 @@ Our website supports the following component.
 2. Q&A section to ask questions freely.
 3. Function to check the lecture you watched recently. -->
 
-## 시작 가이드
+## Start Guide 📌
 <!-- ### Requirements
 For building and running the application you need:
 
@@ -58,19 +62,19 @@ For building and running the application you need:
 - [Strapi 3.6.6](https://www.npmjs.com/package/strapi/v/3.6.6) -->
 
 ### Installation
-1. Repository 클론
+1. Clone Repository
 ```bash
 git clone https://github.com/SeoyoungOhMe/Dr.COCO_Fly_AI.git
 ```
-2. NPM packages 설치
+2. Install NPM packages
 ```bash
 npm install
 ```
-3. build 스크립트 실행
+3. Execute build script
 ```bash
 npm run build
 ```
-4. dev 스크립트 실행
+4. Execute dev script
 ```bash
 npm run dev
 ```
@@ -87,7 +91,7 @@ npm run dev
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)        
 
 ### Development
-> **프론트엔드 개발** </br></br>
+> **Front-end** </br></br>
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-white?style=for-the-badge&logo=Next.js&logoColor=black)
@@ -95,7 +99,7 @@ npm run dev
 
 </br>
 
-> **백엔드 개발** </br></br>
+> **Back-end** </br></br>
 ![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=Python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-green?style=for-the-badge&logo=Django&logoColor=white)
 ![Steamlit](https://img.shields.io/badge/Streamlit-white?style=for-the-badge&logo=Streamlit&logoColor=red)
@@ -105,7 +109,7 @@ npm run dev
 ![Zoom](https://img.shields.io/badge/Zoom-blue?style=for-the-badge&logo=Zoom&logoColor=white)
 
 ---
-## 화면 구성 📺
+## Page Configuration 📺
 | 시작 페이지  |  메인 페이지   |
 | :-------------------------------------------: | :------------: |
 |  <img width="329" src="img/startpage.png"/> |  <img width="329" src="img/mainpage.png"/>|  
@@ -119,22 +123,32 @@ npm run dev
 |  <img width="329" src="img/report.png"/> |  
 
 ---
-## 주요 기능 📦
+## Main Function 📦
 
 <img width="658" src="img/function.png"/>
 
 ### ⭐️ 영상에서 아기의 수면, 뒤집음 여부 판단
 - 4개의 예시 영상 중 하나를 선택해 실행하면, 움직임과 눈감음 정도가 나옵니다. 이를 통해 수면 여부를 파악하고, Mediapipe의 Pose Landmark를 통해 뒤집음 여부를 판단합니다. 그리고 아이가 뒤집거나 깬 돌발 상황에 대해 알림을 주고 코코박사의 코멘트가 하단에 나옵니다.
 
+  If you select and run one of the four example videos, you will see the degree of movement and blinding. This will determine whether you are sleeping or not, and it will be flipped through Mediapipe's Pose Landmark. It will notify you of an unexpected situation where the child flipped or woke up, and Dr. Coco's comment will appear at the bottom.
+
 ### ⭐️ 웹캠에서 아기의 수면, 뒤집음 여부 판단
 - 실시간으로 웹캠을 통해 움직임과 눈감음 정도, 수면 여부와 뒤집기 여부를 화면에 나타냅니다.
 
+  The webcam displays movement, degree of eye contact, sleep, and flipping on the screen in real time.
+
 ### ⭐️ 코코챗 육아 전문 챗봇과 제품 추천 챗봇
 - **육아전문가 챗봇** : 카테고리를 선택 후 육아 관련 질문을 챗봇에게 하면 답변과 생성형 AI로 만든 관련 이미지가 나옵니다.
+- 
+  **Parenting expert chatbot**: If you select a category and ask a child care question to the chatbot, you will get an answer and a related image made of Generative AI.
 - **제품추천가 챗봇** : 육아 제품 추천을 해줍니다.
+
+  **Product recommendation chatbot** : It recommends childcare products.
 
 ### ⭐️ 수면 레포트 
 - 아기의 주간 수면 분석 결과, 또래와의 수면 시간 비교, 코코박사의 조언 등이 나옵니다.
+
+  Baby's weekly sleep analysis results, comparison of sleep time with peers, and Dr. Coco's advice.
 
 
 ---
