@@ -10,15 +10,15 @@
 
 # Dr.COCO
 > **SKT FLY AI Challenger 4기 열정 5조** <br/> 
-**개발기간 (Development Period): 2023.12.28 ~ 2024.2.28**
+**개발기간 : 2023.12.28 ~ 2024.2.28**
 
-## 배포 주소 🔗
+## Deployment Address 🔗
 
 [https://fly-ai-front-test.azurewebsites.net/](https://fly-ai-front-test.azurewebsites.net/) <br>
 <!-- > **프론트 서버** : [http://voluntain.cs.skku.edu:33307/](http://voluntain.cs.skku.edu:33307/)<br>
 > **백엔드 서버** : [http://voluntain.cs.skku.edu:2223/](http://voluntain.cs.skku.edu:2223/)<br> -->
 
-## 웹 개발팀 소개 👥
+## Development Team 👥
 
 - 오서영 : Front-end
 - 임태규(팀장) : Back-end, AI
