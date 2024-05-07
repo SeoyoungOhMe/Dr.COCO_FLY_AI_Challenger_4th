@@ -20,12 +20,12 @@
 
 ## Development Team 👥
 
-- 오서영 : Front-end
+- 오서영 : Front-end, AI
 - 임태규(팀장) : Back-end, AI
-- 김선아 : Back-end
-- 김시원 : Front-end
-- 우정아 : Back-end
-- 주동근 : Planning
+- 김선아 : Back-end, AI
+- 김시원 : Front-end, AI
+- 우정아 : Back-end, AI
+- 주동근 : Planning, AI
 
 
 <!-- |      박지예       |          서채연         |       이현정         |                                                                                                               

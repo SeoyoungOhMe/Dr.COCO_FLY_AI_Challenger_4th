@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, html, head, body, div, span {
+    font-family: 'IBMPlexSansKR-Regular';
+}
+
+
+/* sidebar */
+.st-emotion-cache-pkbazv.eczjsme5, .st-emotion-cache-17lntkn.eczjsme5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* 수면 */
+.sleepreport {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #7D7A79;
+    border-radius: 8px 7px 8px 7px;
+    padding: 7px;
+    text-align: center;
+    margin-top: 14px;
+}
+.sleeptext{
+    font-size: 14px;
+    font-weight: 600;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 15px;
+    padding: 14px;
+}
+.sleeptext p{
+    font-size: 14px;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+.lasttext{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* home */
+.hometitle{
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.st-emotion-cache-1kyxreq{
+    justify-content: center;
+}
+.hheader{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    margin-top: 0px;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #CCD3CA;
+}   
+.htext{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 3px;
+}
+
+/* baby */
+.babytitle{
+    font-size: 36px;
+    font-weight: 700;
+}
+.babytext{
+    font-size: 16px;
+    font-weight: 650;
+}
+
+/* product */
+.producttitle{
+    font-size: 36px;
+    font-weight: 700;
+}
+.producttext{
+    font-size: 16px;
+    font-weight: 650;
+}
