@@ -1,5 +1,5 @@
 # 코코박사
-![Project Title](img/project-title.png)
+![Project Title](Frontend/img/project-title.png)
 <div align="center">
 <!-- <img width="329" alt="image" src="https://user-images.githubusercontent.com/50205887/207568862-cdc9e2c0-b03c-43ff-bf46-3ba79a110d0c.png"> -->
 
@@ -112,20 +112,20 @@ npm run dev
 ## Page Configuration 📺
 | 시작 페이지  |  메인 페이지   |
 | :-------------------------------------------: | :------------: |
-|  <img width="329" src="img/startpage.png"/> |  <img width="329" src="img/mainpage.png"/>|  
+|  <img width="329" src="Frontend/img/startpage.png"/> |  <img width="329" src="Frontend/img/mainpage.png"/>|  
 | 영상 선택 페이지   |  영상 실행 페이지   |  
-| <img width="329" src="img/videoSelect.png"/>   |  <img width="329" src="img/videoShow.png"/>     |
+| <img width="329" src="Frontend/img/videoSelect.png"/>   |  <img width="329" src="Frontend/img/videoShow.png"/>     |
 | 웹캠 페이지  |  코코챗 메인 페이지   |
-|  <img width="329" src="img/webcam.png"/> |  <img width="329" src="img/cocochat.png"/>|  
+|  <img width="329" src="Frontend/img/webcam.png"/> |  <img width="329" src="Frontend/img/cocochat.png"/>|  
 | 육아전문챗 페이지  |  제품추천챗 페이지   |
-|  <img width="329" src="img/profchat.png"/> |  <img width="329" src="img/recchat.png"/>| 
+|  <img width="329" src="Frontend/img/profchat.png"/> |  <img width="329" src="Frontend/img/recchat.png"/>| 
 | 수면패턴 분석 페이지  |     |
-|  <img width="329" src="img/report.png"/> |  
+|  <img width="329" src="Frontend/img/report.png"/> |  
 
 ---
 ## Main Function 📦
 
-<img width="658" src="img/function.png"/>
+<img width="658" src="Frontend/img/function.png"/>
 
 ### ⭐️ 영상에서 아기의 수면, 뒤집음 여부 판단
 - 4개의 예시 영상 중 하나를 선택해 실행하면, 움직임과 눈감음 정도가 나옵니다. 이를 통해 수면 여부를 파악하고, Mediapipe의 Pose Landmark를 통해 뒤집음 여부를 판단합니다. 그리고 아이가 뒤집거나 깬 돌발 상황에 대해 알림을 주고 코코박사의 코멘트가 하단에 나옵니다.
